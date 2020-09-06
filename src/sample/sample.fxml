@@ -1,0 +1,33 @@
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox spacing="110" alignment="CENTER_RIGHT">
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="790.0" top="5.0" right="100.0"/>
+            </BorderPane.margin>
+            <Button fx:id="loading" text="Load a game!" prefHeight="45" prefWidth="100" onAction="#onButtonClicked"/>
+            <Button fx:id="saving" text="Save the game!" prefHeight="45" prefWidth="100" onAction="#onButtonClicked"/>
+        </HBox>
+    </top>
+    <center>
+        <GridPane fx:id="gridMap">
+            <BorderPane.margin>
+                <Insets bottom="55.0" left="50.0" right="50.0"/>
+            </BorderPane.margin>
+        </GridPane>
+    </center>
+    <right>
+        <TextArea fx:id="commentator" prefWidth="410" prefHeight="200" editable="false" wrapText="true">
+            <BorderPane.margin>
+                <Insets bottom="55.0" top="440.0" right="50.0"/>
+            </BorderPane.margin>
+        </TextArea>
+    </right>
+</BorderPane>
